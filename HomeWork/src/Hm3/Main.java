@@ -38,7 +38,7 @@ public class Main {
                 "1)По зарплате\n" +
                 "2)По имени\n" +
                 "3)По фамилии");
-//        Employee.setNumber(sc.nextInt());
+        Employee.setNumber(sc.nextInt());
 //        Arrays.sort(employees);
 
         System.out.println("--------------");
