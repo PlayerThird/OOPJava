@@ -1,0 +1,7 @@
+package Lecture3.Ex3.Napitok;
+
+public class Water extends Ingredient{
+    public Water(String brand) {
+        super(brand);
+    }
+}
