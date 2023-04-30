@@ -20,7 +20,7 @@ public class Menu {
         switch (point){
             case 1:{
                 System.out.println("Есть вот такие ящики -> \n");
-                Viewer.ShowForCompare(manyBoxes);
+                Viewer.ShowMinimal(manyBoxes);
                 System.out.println("Какие ящики вы хотите сравнить(цифра)?\n 1й ящик:");
                 Scanner sc = new Scanner(System.in);
                 int firstBox = sc.nextInt();
@@ -32,6 +32,8 @@ public class Menu {
             }
             case 2:{
                 System.out.println("Я же сказал, что еще не работает!");
+
+//                putOnBox(manyBoxes);
                 SetMenu(manyBoxes);
                 break;
             }
@@ -42,17 +44,16 @@ public class Menu {
             }
             case 4:{
                 CreateBoxes.AddList(manyBoxes);
-                System.out.println("Теперь там:");
-                Viewer.ShowForCompare(manyBoxes);
+
                 SetMenu(manyBoxes);
                 break;
             }
             case 5:{
-                Viewer.ShowForCompare(manyBoxes);
+                Viewer.ShowMinimal(manyBoxes);
                 System.out.println("Какую удаляем?");
                 manyBoxes.remove(new Scanner(System.in).nextInt());
                 System.out.println("Теперь там:");
-                Viewer.ShowForCompare(manyBoxes);
+                Viewer.ShowMinimal(manyBoxes);
                 SetMenu(manyBoxes);
                 break;
             }
@@ -68,4 +69,14 @@ public class Menu {
             System.out.println(o1.getNameBox()+" < "+o2.getNameBox());
         }
     }
+//    public static void putOnBox(ArrayList<Box<Fruit>> manyBoxes){
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Есть вот такие ящики:");
+//        Viewer.ShowMinimal(manyBoxes);
+//        System.out.println("Выберите куда будете перетаскивать");
+//        int outBox = sc.nextInt();
+//        System.out.println("Выберите откуда будете перетаскивать");
+//        int inBox = sc.nextInt();
+//        manyBoxes.get(outBox).putFruits(manyBoxes.get(inBox));
+//    }
 }

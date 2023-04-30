@@ -1,10 +1,9 @@
 package Hm4;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 
 class Box<T extends Fruit> implements Comparable<Box> {
-    ArrayList<T> fruits;
+    private ArrayList<T> fruits;
     private Float mass;
     private String nameBox;
 
@@ -37,9 +36,6 @@ class Box<T extends Fruit> implements Comparable<Box> {
         return CalculatetThisBox();
 
     }
-
-
-
     @Override
     public String toString() {
         return "\nBox" +
@@ -55,4 +51,19 @@ class Box<T extends Fruit> implements Comparable<Box> {
         } else return 0;
     }
 
+    //Я пытался :\
+//    public ArrayList<Fruit> backFructs(int col, Box<Fruit> fruitBox) {
+//        ArrayList<Fruit> fructs = new ArrayList<>();
+//        for (int i = 0; i < col; i++) {
+//            fructs.add((T) fruitBox.fruits.get(i));
+//        }
+//        return frutcs;
+//    }
+
+//    public void putFruits(Box<Fruit> fruitBox, int col) {
+//        if(col > fruitBox.fruits.size()){
+//            this.fruits.add(fruitBox.backFructs((fruitBox.fruits.size()),fruitBox));
+//        }
+//        this.fruits.add(fruitBox.backFructs(col, fruitBox),fruitBox);
+//    }
 }

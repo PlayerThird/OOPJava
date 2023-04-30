@@ -10,7 +10,7 @@ public class Viewer {
                 "|%8.1fkg|\n" +
                 "↳----------↲\n", box.getNameBox(),"|", box.CalculatetThisBox());
     }
-    public static void ShowForCompare(ArrayList<Box<Fruit>> manyBoxes) {
+    public static void ShowMinimal(ArrayList<Box<Fruit>> manyBoxes) {
         for (int i = 0; i < manyBoxes.size(); i++) {
 
             System.out.println(i +" - "+ manyBoxes.get(i).getNameBox());

@@ -28,12 +28,12 @@ public class CreateBoxes {
         switch (name) {
             case "Apple": {
                 for (int i = 0; i < col; i++) {
-                    listOfFruit.add(new Orange());
+                    listOfFruit.add(new Apple(name));
                 }
             }
             case "Orange": {
                 for (int i = 0; i < col; i++) {
-                    listOfFruit.add(new Orange());
+                    listOfFruit.add(new Orange(name));
                 }
             }
         }
