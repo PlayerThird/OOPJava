@@ -1,4 +1,4 @@
-package Hm3;
+package Hm32.Hm3;
 
 public class Worker extends Employee {
 

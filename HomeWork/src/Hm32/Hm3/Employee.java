@@ -1,4 +1,4 @@
-package Hm3;
+package Hm32.Hm3;
 
 abstract class Employee implements Comparable<Employee>{
 

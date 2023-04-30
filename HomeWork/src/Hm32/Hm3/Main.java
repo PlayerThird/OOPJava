@@ -1,7 +1,5 @@
-package Hm3;
+package Hm32.Hm3;
 
-import java.util.Arrays;
-import java.util.Comparator;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -41,7 +39,8 @@ public class Main {
         Employee.setNumber(sc.nextInt());
 //        Arrays.sort(employees);
 
-        System.out.println("--------------");
+
+        System.out.println("--------------------");
 
         for (Employee emp : employees) {
             System.out.println(emp);
