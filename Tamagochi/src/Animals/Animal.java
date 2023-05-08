@@ -6,4 +6,5 @@ public class Animal {
     private int health;
     private int happy;
     private int energy;
+
 }

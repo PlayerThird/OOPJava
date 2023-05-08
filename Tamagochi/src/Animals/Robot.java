@@ -1,4 +1,4 @@
 package Animals;
 
-public class Robot extends Animal{
+public class Robot extends Animal implements CycleMinus{
 }
