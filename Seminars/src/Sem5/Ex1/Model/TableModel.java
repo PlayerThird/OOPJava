@@ -48,6 +48,16 @@ public class TableModel implements Model {
      * @param name            имя
      */
     public int changeReservationTeble(int oldReservation, Date reservationDate, int tableNo, String name) {
+        for (Table table :
+                tables) {
+            for (Reservation reserv :
+                    table.getReservation()) {
+                if (reserv.getId() == oldReservation) {
+                    table.getReservation().remove(reserv);
+                    return reservationTable(reservationDate, tableNo, name);
+                }
+            }
+        }
         return -1;
     }
 }

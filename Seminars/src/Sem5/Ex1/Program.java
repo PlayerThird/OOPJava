@@ -23,6 +23,6 @@ public class Program {
         bookingPresenter.updateView();
 
         bookingView.reservationTable(new Date(),3,"Волк");//эмуляция выбора меню
-
+        bookingView.changeReservationTeble(1001,new Date(),4,"Волк");
     }
 }

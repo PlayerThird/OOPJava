@@ -21,4 +21,5 @@ public interface Model {
      * @return
      */
     int reservationTable(Date resetionDate, int tableNo, String name);
+    int changeReservationTeble(int oldReservation, Date reservationDate, int tableNo, String name);
 }

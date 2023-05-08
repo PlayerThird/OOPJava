@@ -29,9 +29,18 @@ public class BookingView implements View {
     @Override
     public void showReservationStatus(int reservationNo) {
         if (reservationNo > 0){
-            System.out.printf("Ваш столик был успешно забронирован. Номер брони #%d",reservationNo);
+            System.out.printf("Ваш столик был успешно забронирован. Номер брони #%d\n",reservationNo);
         } else {
-            System.out.println("Ошибка бронирования столика");
+            System.out.println("Ошибка бронирования столика\n");
+        }
+    }
+
+    @Override
+    public void showEditReservationStatus(int oldNumber, int reservationNo) {
+        if (reservationNo > 0){
+            System.out.printf("Вместо брони по номером %d.Заменили на новый Номер брони #%d\n",oldNumber,reservationNo);
+        } else {
+            System.out.println("Ошибка бронирования столика\n");
         }
     }
 
@@ -44,6 +53,8 @@ public class BookingView implements View {
     public void setObserver(ViewObserver observer) {
         this.observer = observer;
     }
+
+
 
     /**
      * Действие клиента (пользователь нажал на кнопку бронирования столика),
@@ -67,6 +78,7 @@ public class BookingView implements View {
      * @param name имя
      */
     public void changeReservationTeble(int oldReservation, Date reservationDate, int tableNo, String name){
+        observer.onChangeReservationTable(oldReservation, reservationDate, tableNo, name);
         // TODO: Обратится к наблюдателю, указать на процедуру изменений бронирования столика
     }
 

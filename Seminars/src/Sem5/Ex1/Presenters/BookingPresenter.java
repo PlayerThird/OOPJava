@@ -38,6 +38,9 @@ public class BookingPresenter implements ViewObserver {
     private void updateReservationStatusView(int reservationNo) {
         view.showReservationStatus(reservationNo);
     }
+    private void updateEditReservationStatusView(int oldNumber, int reservationNo) {
+        view.showEditReservationStatus(oldNumber, reservationNo);
+    }
 
     /**
      * Получили уведомление о попытке брони столика
@@ -50,4 +53,14 @@ public class BookingPresenter implements ViewObserver {
         int reservationNo = model.reservationTable(orderDate, tableNo, name);
         updateReservationStatusView(reservationNo);
     }
+
+    @Override
+    public void onChangeReservationTable(int oldNumber, Date orderDate, int tableNo, String name) {
+        int reservationNo = model.changeReservationTeble(oldNumber, orderDate, tableNo, name);
+        updateEditReservationStatusView(oldNumber,reservationNo);
+    }
+
+
+
+
 }

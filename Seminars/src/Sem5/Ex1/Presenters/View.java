@@ -19,4 +19,6 @@ public interface View {
      * @param observer наблюдатель (презентер)
      */
     void setObserver(ViewObserver observer);
+
+    void showEditReservationStatus(int oldNumber, int reservationNo);
 }
