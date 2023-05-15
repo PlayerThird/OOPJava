@@ -1,12 +1,21 @@
 package Stufs;
 
-public class Inventory extends ChangeStatus{
+public class Inventory implements ChangeStatus {
     private boolean solarBattery = false;
     private boolean autoDispEat = false;
     private boolean autoDispWhat = false;
     private boolean alarm = false;
     private boolean insurance = false;
     private boolean toys = false;
+
+    private int eatStuf;
+    private int whaterStuf;
+    private int medikStuf;
+    private int yummy;
+    private int battery;
+
+    private int coins = 100;
+
 
     public boolean isSolarBattery() {
         return solarBattery;
@@ -36,28 +45,96 @@ public class Inventory extends ChangeStatus{
         this.solarBattery = solarBattery;
     }
 
-    public void setAutoDispEat(boolean autoDispEat) {
-        this.autoDispEat = autoDispEat;
+    /**
+     * Возврат еды(расходники)
+     * @return сколько еды в инвентаре
+     */
+    public int isEatStuf() {
+        return this.eatStuf;
     }
 
-    public void setAutoDispWhat(boolean autoDispWhat) {
-        this.autoDispWhat = autoDispWhat;
+    public int isWhaterStuf() {
+        return this.whaterStuf;
     }
 
-    public void setAlarm(boolean alarm) {
-        this.alarm = alarm;
+    public int isMedikStuf() {
+        return this.medikStuf;
     }
 
-    public void setInsurance(boolean insurance) {
-        this.insurance = insurance;
+    public int isBattery() {
+        return this.battery;
     }
 
-    public void setToys(boolean toys) {
-        this.toys = toys;
+    public int isYummy() {
+        return this.yummy;
+    }
+
+
+    @Override
+    public boolean changeSolarBattery() {
+        return this.solarBattery = true;
     }
 
     @Override
-    public boolean solarBattery(boolean change) {
-        return false;
+    public boolean changeAutoDispEat() {
+        return this.autoDispEat = true;
     }
+
+    @Override
+    public boolean changeAutoDispWhat() {
+        return this.autoDispWhat = true;
+    }
+
+    @Override
+    public boolean changeAlarm() {
+        return this.alarm = true;
+    }
+
+    @Override
+    public boolean changeInsurance() {
+        return this.insurance = true;
+    }
+
+    @Override
+    public boolean changeToys() {
+        return this.toys = true;
+    }
+
+    @Override
+    public int changeEatStuf(int collums) {
+        return this.eatStuf += collums;
+    }
+
+    @Override
+    public int changeWhaterStuf(int collums) {
+        return this.whaterStuf += collums;
+    }
+
+    @Override
+    public int changeMedikStuf(int collums) {
+        return this.medikStuf += collums;
+    }
+
+    @Override
+    public int changeYummyStuf(int collums) {
+        return this.yummy += collums;
+    }
+
+    @Override
+    public int changeBatteryStuf(int collums) {
+        return this.battery += collums;
+    }
+
+    public int getCoins() {
+        return coins;
+    }
+
+    public void plusDayCoin() {
+        this.coins += 10;
+    }
+    public void minusCoin(int collum){
+        this.coins -= collum;
+    }
+
+
 }

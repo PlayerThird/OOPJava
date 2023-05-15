@@ -1,2 +1,5 @@
-package Moduls;public class Cycle {
+package Moduls;
+
+public class Cycle {
+
 }
